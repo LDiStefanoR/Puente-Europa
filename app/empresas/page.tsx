@@ -179,7 +179,7 @@ export default function EmpresasPage() {
             </div>
 
             {/* Asistencia Continua */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-[#004C97] flex items-center justify-center flex-shrink-0">
                   <Plane className="w-7 h-7 text-white" />
@@ -194,6 +194,59 @@ export default function EmpresasPage() {
               <p className="text-gray-600 ml-16 italic">
                 "No dejamos a nadie solo en el proceso. Tu empresa recibe candidatos preparados, motivados y listos para integrarse."
               </p>
+            </div>
+
+            {/* Campañas de Reclutamiento */}
+            <div className="bg-gradient-to-br from-[#004C97] to-[#003a72] rounded-3xl p-8 md:p-12 shadow-xl text-white">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">Campañas de reclutamiento personalizadas</h3>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    Cuando tu empresa necesita escalar rápido o buscar perfiles específicos, <strong>diseñamos campañas de reclutamiento focalizadas</strong> para atraer al talento exacto que necesitás.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="ml-16 space-y-4">
+                <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h4 className="font-semibold text-lg mb-3">Colaboración con empresas españolas especializadas</h4>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Trabajamos en alianza con <strong>agencias digitales españolas</strong> expertas en publicidad estratégica para llegar a los mejores candidatos a través de:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-3 mt-4">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-xl">📸</span>
+                      <span>Instagram Ads segmentadas</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-xl">👥</span>
+                      <span>Facebook targetizado</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-xl">🔍</span>
+                      <span>Google Search y Display</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-xl">▶️</span>
+                      <span>YouTube pre-roll campaigns</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h4 className="font-semibold text-lg mb-2">Equipo profesional dedicado</h4>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Contamos con un <strong>equipo multidisciplinario</strong> que se encarga de la logística y realización de tareas de manera profesional: desde marketing digital hasta coordinación de viajes, documentación legal y seguimiento de candidatos.
+                  </p>
+                </div>
+
+                <p className="text-white/70 text-sm italic mt-4">
+                  "Focalizamos esfuerzos, atraemos talento calificado y te presentamos shortlists de alta calidad en tiempo récord."
+                </p>
+              </div>
             </div>
           </div>
         </div>
