@@ -1,38 +1,42 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Quote, Star, MapPin, Building2 } from 'lucide-react'
+import { Quote, Star, MapPin } from 'lucide-react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 const testimonials = [
   {
-    company: 'Nordic Logistics BV',
-    location: 'Rotterdam, Países Bajos',
-    role: 'HR Director',
-    person: 'Sophie van Dijk',
-    image: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=600&auto=format&fit=crop',
+    name: 'Martín Álvarez',
+    age: 28,
+    origin: 'Buenos Aires, Argentina',
+    destination: 'Ámsterdam, Países Bajos',
+    role: 'Ingeniero de Software',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
     testimonial:
-      'Gracias a Puente Europa, nuestra empresa cubrió puestos clave en tiempo récord. El equipo gestionó selección, documentación y alojamiento sin fricciones.',
+      'Hace dos años soñaba con crecer profesionalmente en Europa, pero no sabía por dónde empezar. Puente Europa me guió en cada paso: desde armar mi CV europeo hasta encontrar alojamiento en Ámsterdam. Hoy trabajo en una empresa increíble y vivo la vida que siempre quise.',
     rating: 5,
   },
   {
-    company: 'Alpine Tech GmbH',
-    location: 'Múnich, Alemania',
-    role: 'Talent Acquisition Lead',
-    person: 'Thomas Müller',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop',
+    name: 'Carolina Méndez',
+    age: 32,
+    origin: 'Córdoba, Argentina',
+    destination: 'Rotterdam, Países Bajos',
+    role: 'Coordinadora de Logística',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop',
     testimonial:
-      'Reducimos costos y tiempos de hiring en un 40%. Candidatos comprometidos y listos para integrarse al negocio.',
+      'El proceso fue transparente y humano. Leonardo me acompañó en cada duda, me conectó con empresas serias y me ayudó a adaptarme a la cultura holandesa. No fue solo un trabajo, fue el comienzo de una nueva vida.',
     rating: 5,
   },
   {
-    company: 'BlueWave Hospitality',
-    location: 'Barcelona, España',
-    role: 'Operations Manager',
-    person: 'Laura García',
-    image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=600&auto=format&fit=crop',
+    name: 'Diego Romero',
+    age: 35,
+    origin: 'Rosario, Argentina',
+    destination: 'Barcelona, España',
+    role: 'Chef Ejecutivo',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop',
     testimonial:
-      'La coordinación integral de visados y traslados nos permitió abrir dos unidades nuevas sin demoras.',
+      'Gracias a Puente Europa pude cumplir mi sueño de trabajar en gastronomía europea. Me ayudaron con visado, documentos y hasta me conectaron con restaurantes que valoraban mi experiencia. Hoy lidero una cocina en Barcelona.',
     rating: 5,
   },
 ]
@@ -48,14 +52,14 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Resultados que generan confianza</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Casos reales de empresas europeas que escalaron sus equipos con talento argentino</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Historias reales, sueños cumplidos</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Conocé a quienes ya viven y trabajan en Europa gracias a Puente Europa</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={testimonial.company}
+              key={testimonial.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -63,7 +67,7 @@ export default function TestimonialsSection() {
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               <Quote className="w-8 h-8 text-[#fb923c] mb-6" />
-              <p className="text-gray-200 leading-relaxed mb-6 text-lg">"{testimonial.testimonial}"</p>
+              <p className="text-gray-200 leading-relaxed mb-6 text-lg italic">"{testimonial.testimonial}"</p>
               <div className="flex items-center mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-[#fb923c] fill-current" />
@@ -73,16 +77,16 @@ export default function TestimonialsSection() {
                 <div className="relative">
                   <Image
                     src={testimonial.image}
-                    alt={testimonial.company}
+                    alt={testimonial.name}
                     width={60}
                     height={60}
                     className="w-15 h-15 rounded-full object-cover border-2 border-[#fb923c]"
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg flex items-center gap-2"><Building2 className="w-4 h-4" /> {testimonial.company}</h4>
-                  <div className="flex items-center text-gray-300 text-sm mb-1">{testimonial.person} · {testimonial.role}</div>
-                  <div className="flex items-center text-gray-300 text-sm"><MapPin className="w-4 h-4 mr-1" />{testimonial.location}</div>
+                  <h4 className="font-semibold text-lg">{testimonial.name}, {testimonial.age}</h4>
+                  <div className="flex items-center text-gray-300 text-sm mb-1">{testimonial.role}</div>
+                  <div className="flex items-center text-gray-300 text-sm"><MapPin className="w-4 h-4 mr-1" />{testimonial.origin} → {testimonial.destination}</div>
                 </div>
               </div>
             </motion.div>
@@ -97,12 +101,12 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center"
         >
-          <h3 className="text-3xl font-bold mb-8">Impacto en contratación</h3>
+          <h3 className="text-3xl font-bold mb-8">Nuestro impacto</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">40%</div><div className="text-gray-300">Menos tiempo de hiring</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">95%</div><div className="text-gray-300">Retención 6+ meses</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">25+</div><div className="text-gray-300">Empresas activas</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">72h</div><div className="text-gray-300">Presentación de shortlist</div></div>
+            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">100+</div><div className="text-gray-300">Vidas transformadas</div></div>
+            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">5</div><div className="text-gray-300">Países europeos</div></div>
+            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">95%</div><div className="text-gray-300">Tasa de éxito</div></div>
+            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">24/7</div><div className="text-gray-300">Soporte continuo</div></div>
           </div>
         </motion.div>
 
@@ -114,9 +118,9 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <h3 className="text-3xl font-bold mb-4">¿Listos para cubrir puestos clave?</h3>
-          <p className="text-xl text-gray-300 mb-8">Solicitá un shortlist en 72 horas</p>
-          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#004C97] hover:bg-[#003a72] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Solicitar Talento</button>
+          <h3 className="text-3xl font-bold mb-4">¿Listo para escribir tu propia historia?</h3>
+          <p className="text-xl text-gray-300 mb-8">Conectamos personas con oportunidades, sueños con realidad</p>
+          <Link href="/contacto" className="inline-block bg-white text-[#004C97] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Comenzar mi proceso</Link>
         </motion.div>
       </div>
     </section>

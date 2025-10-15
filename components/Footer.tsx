@@ -28,9 +28,11 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-[#004C97]">Puente</span> Europa
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Conectamos talentos argentinos con oportunidades laborales en Europa. 
-              Tu puente hacia una nueva vida profesional.
+            <p className="text-gray-300 mb-4 leading-relaxed italic">
+              "Uniendo personas, culturas y oportunidades."
+            </p>
+            <p className="text-gray-400 text-sm mb-6">
+              Conectamos talentos argentinos con oportunidades laborales en Europa.
             </p>
             <div className="flex space-x-4">
               <a 
