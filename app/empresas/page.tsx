@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { ShieldCheck, Filter, Users, Plane, HeartHandshake, TrendingUp, Clock, Award } from 'lucide-react'
+import { ShieldCheck, Filter, Users, Plane, HeartHandshake, TrendingUp, Clock, Award, Globe, Zap, Target, Building2 } from 'lucide-react'
 
 export default function EmpresasPage() {
   return (
@@ -21,7 +21,7 @@ export default function EmpresasPage() {
         <div className="container-max section-padding relative z-10 text-white">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-              Talento argentino: la Europa de América
+              Expandí tu empresa con talento argentino
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
               Accedé a un mercado laboral único con profesionales responsables, comprometidos y culturalmente alineados con Europa.
@@ -51,7 +51,7 @@ export default function EmpresasPage() {
                 <p>
                   Los argentinos no se sienten ajenos a Europa: <strong>se sienten en casa.</strong> Comparten valores de trabajo, responsabilidad y seriedad profesional que los hacen candidatos ideales para empresas europeas que buscan talento comprometido y adaptable.
                 </p>
-                <p className="text-[#004C97] font-semibold italic">
+                <p className="text-[#004C97] font-semibold italic text-xl">
                   "Tienen el hambre de conocer el mundo que sus abuelos dejaron, con la madurez y profesionalismo del talento latinoamericano."
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function EmpresasPage() {
             {/* Características del talento argentino */}
             <h3 className="text-3xl font-bold text-[#0f172a] mb-8 text-center">Características del mercado laboral argentino</h3>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                 <div className="w-12 h-12 rounded-xl bg-[#004C97]/10 flex items-center justify-center mb-4">
                   <Award className="w-6 h-6 text-[#004C97]" />
@@ -97,8 +97,113 @@ export default function EmpresasPage() {
         </div>
       </section>
 
-      {/* Nuestro Rol como Puente Europa */}
+      {/* Beneficios de Terciarizar */}
       <section className="section-padding bg-gradient-to-br from-[#F2F2F2] to-white">
+        <div className="container-max">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-6 text-center">
+              Ahorrá tiempo para lo que realmente importa: tu negocio
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12 leading-relaxed">
+              Terciarizar el servicio de filtro y contratación con Puente Europa te libera de tareas operativas y te permite enfocarte en tu core business.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                <div className="w-14 h-14 rounded-xl bg-[#004C97] flex items-center justify-center mb-4">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-3">Externalización completa</h3>
+                <p className="text-gray-700">Filtramos, entrevistamos y preseleccionamos. Vos solo elegís entre los mejores. Ahorrás semanas de búsqueda.</p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                <div className="w-14 h-14 rounded-xl bg-[#004C97] flex items-center justify-center mb-4">
+                  <ShieldCheck className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-3">Gestión legal sin complicaciones</h3>
+                <p className="text-gray-700">Documentos, contratos, visados y asesoramiento legal resueltos por nuestro equipo especializado.</p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                <div className="w-14 h-14 rounded-xl bg-[#004C97] flex items-center justify-center mb-4">
+                  <HeartHandshake className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-3">Cuidado del personal activo</h3>
+                <p className="text-gray-700">Seguimiento post-contratación, soporte en adaptación cultural y resolución de problemas en tiempo real.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EL FACTOR ARGENTINO - Sección estelar */}
+      <section className="section-padding bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
+        <div className="container-max">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+                El Factor Argentino
+              </h2>
+              <p className="text-2xl text-white/90 italic font-light">
+                "Gratitud que se transforma en compromiso"
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 mb-8">
+              <h3 className="text-3xl font-bold mb-6">¿Por qué los argentinos tienen menor rotación laboral?</h3>
+              
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p className="text-white/90">
+                  Los argentinos que llegan a Europa a través de Puente Europa poseen un <strong className="text-[#fb923c]">amor profundo por Europa</strong> y una <strong className="text-[#fb923c]">conexión emocional única:</strong> es la tierra de sus abuelos, el lugar que siempre soñaron conocer.
+                </p>
+
+                <div className="bg-[#fb923c]/20 rounded-2xl p-6 border-l-4 border-[#fb923c]">
+                  <p className="text-xl font-semibold mb-3">🔑 Factor clave para tu empresa:</p>
+                  <p className="text-white/90">
+                    Estas oportunidades <strong>son completamente desconocidas en Argentina</strong> para la mayoría de las personas, o piensan que son inalcanzables, muy lejanas o imposibles.
+                  </p>
+                </div>
+
+                <p className="text-white/90">
+                  <strong>Cuando un argentino recibe una oferta de trabajo en Europa con alojamiento incluido, lo ve como un privilegio único.</strong>
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6 mt-8">
+                  <div className="bg-white/10 rounded-xl p-6 text-center">
+                    <div className="text-4xl mb-3">❤️</div>
+                    <h4 className="font-semibold mb-2">Gratitud</h4>
+                    <p className="text-sm text-white/80">Por alojamiento, trabajo estable y oportunidades</p>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-6 text-center">
+                    <div className="text-4xl mb-3">🤝</div>
+                    <h4 className="font-semibold mb-2">Compromiso</h4>
+                    <p className="text-sm text-white/80">Baja rotación vs otros grupos laborales</p>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-6 text-center">
+                    <div className="text-4xl mb-3">🏆</div>
+                    <h4 className="font-semibold mb-2">Lealtad</h4>
+                    <p className="text-sm text-white/80">Valoran cada día de trabajo y crecimiento</p>
+                  </div>
+                </div>
+
+                <div className="bg-green-600/20 rounded-2xl p-6 border border-green-400/30 mt-6">
+                  <p className="text-xl font-bold text-center">
+                    📊 Hemos comprobado: Los argentinos tienen <span className="text-[#fb923c]">menor rotación laboral</span> que otros grupos por un factor clave: <strong className="text-green-300">GRATITUD</strong>.
+                  </p>
+                </div>
+
+                <p className="text-white/90 text-center text-xl font-light italic">
+                  "Saben que estas oportunidades son un privilegio, y lo demuestran con compromiso diario."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nuestro Rol como Puente Europa */}
+      <section className="section-padding bg-white">
         <div className="container-max">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-8 text-center">
@@ -200,7 +305,7 @@ export default function EmpresasPage() {
             <div className="bg-gradient-to-br from-[#004C97] to-[#003a72] rounded-3xl p-8 md:p-12 shadow-xl text-white">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-7 h-7 text-white" />
+                  <Target className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Campañas de reclutamiento personalizadas</h3>
@@ -252,91 +357,91 @@ export default function EmpresasPage() {
         </div>
       </section>
 
-      {/* Beneficios para Empresas */}
-      <section className="section-padding bg-gradient-to-br from-[#004C97] to-[#003a72] text-white">
+      {/* Expansión Global */}
+      <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Beneficios para tu empresa</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Accedé a un mercado laboral inexplorado con profesionales que aman Europa tanto como vos
-            </p>
-          </div>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-8 text-center">
+              Rompé barreras continentales
+            </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-white" />
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 shadow-xl border-2 border-amber-200 mb-12">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-[#0f172a] mb-4">Expansión global de tu empresa</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    Trabajar con Puente Europa significa que tu empresa <strong className="text-amber-700">sigue rompiendo barreras continentales y fronteras</strong>, y estará un paso más cerca de la expansión e importancia global.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    En el <strong>mundo competitivo de hoy</strong>, la diversidad internacional no es solo un valor: es una <span className="bg-amber-200 px-2 py-1 rounded font-semibold">ventaja estratégica clave</span>.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Reducción de costos de hiring</h3>
-              <p className="text-white/80">Ahorrá tiempo y recursos con un proceso llave en mano: desde la selección hasta la integración.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-white" />
+            {/* Red internacional */}
+            <div className="bg-gradient-to-br from-[#004C97] to-[#003a72] rounded-3xl p-8 md:p-12 shadow-xl text-white">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">Red de cooperación internacional</h3>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    Formamos parte de una <strong>red global de agencias</strong> para garantizar estabilidad en oferta y demanda laboral.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Shortlist en 72 horas</h3>
-              <p className="text-white/80">Presentamos candidatos preseleccionados en tiempo récord para que arranques rápido.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <ShieldCheck className="w-6 h-6 text-white" />
+              
+              <div className="ml-16 space-y-4">
+                <p className="text-white/80 leading-relaxed">
+                  Trabajamos con <strong>agencias de todo el mundo</strong> mediante convenios, alianzas y acuerdos de cooperación para asegurar:
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#fb923c] text-xl">✓</span>
+                    <span className="text-white/90"><strong>Flujo constante</strong> de candidatos calificados</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#fb923c] text-xl">✓</span>
+                    <span className="text-white/90"><strong>Estabilidad</strong> en oferta y demanda laboral</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#fb923c] text-xl">✓</span>
+                    <span className="text-white/90"><strong>Precios competitivos</strong> mediante convenios internacionales</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#fb923c] text-xl">✓</span>
+                    <span className="text-white/90"><strong>Crecimiento conjunto</strong> del proyecto y las empresas asociadas</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Garantía de calidad</h3>
-              <p className="text-white/80">Todos los candidatos son evaluados por competencias, referencias y documentación verificada.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <HeartHandshake className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Baja rotación</h3>
-              <p className="text-white/80">Profesionales que buscan estabilidad y crecimiento a largo plazo en tu organización.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Diversidad e innovación</h3>
-              <p className="text-white/80">Talento con perspectivas frescas y experiencia internacional que enriquece tu equipo.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                <Plane className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Soporte logístico completo</h3>
-              <p className="text-white/80">Alojamiento, documentos, traslado: nosotros nos encargamos de todo para que vos te enfoques en tu negocio.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Empresas que ya confían */}
-      <section className="section-padding bg-white">
-        <div className="container-max text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-6">
-            Empresas europeas que ya se sumaron al proyecto
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Cada vez más organizaciones en Holanda, Alemania, España y otros países europeos descubren el valor del talento argentino responsable y comprometido.
-          </p>
-
-          <div className="bg-gradient-to-br from-[#F2F2F2] to-white rounded-3xl p-12 shadow-xl border border-gray-100">
-            <p className="text-2xl text-gray-700 mb-8 italic leading-relaxed">
-              "Queremos acercar a personas que <strong className="text-[#004C97]">amarían tener la oportunidad de trabajar con ustedes</strong>."
-            </p>
-            <p className="text-lg text-gray-600 mb-8">
-              Si tu empresa valora la diversidad, el compromiso y está dispuesta a brindar alojamiento y herramientas necesarias para que profesionales argentinos crezcan en Europa, <strong>Puente Europa es tu socio ideal.</strong>
-            </p>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-10 py-4 bg-[#004C97] text-white rounded-lg font-bold text-lg hover:bg-[#003a72] transition-all duration-300 transform hover:scale-105 shadow-xl"
-            >
-              Solicitar Asesoría Personalizada →
-            </Link>
+      {/* Mensaje emocional final */}
+      <section className="section-padding bg-gradient-to-r from-[#F2F2F2] to-white">
+        <div className="container-max">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white rounded-3xl p-12 shadow-2xl border-2 border-[#004C97]/20">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-6 leading-tight">
+                El sueño europeo se hace realidad desde Argentina
+              </h2>
+              <p className="text-2xl text-gray-700 mb-8 italic font-light leading-relaxed">
+                "Cada oportunidad que brindás, <strong className="text-[#004C97]">transforma no solo una vida</strong>, sino <strong className="text-[#fb923c]">un país entero</strong>."
+              </p>
+              <Link 
+                href="/contacto" 
+                className="inline-flex items-center justify-center px-10 py-4 bg-[#004C97] text-white rounded-lg font-bold text-lg hover:bg-[#003a72] transition-all duration-300 transform hover:scale-105 shadow-xl"
+              >
+                Sumate a nuestra red →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

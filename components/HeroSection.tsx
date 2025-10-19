@@ -16,12 +16,19 @@ export default function HeroSection() {
       </div>
 
       <div className="container-max section-padding relative z-10 text-white">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
+          <div className="bg-gradient-to-r from-[#fb923c]/20 to-transparent backdrop-blur-sm rounded-2xl p-6 mb-6 border-l-4 border-[#fb923c]">
+            <p className="text-2xl md:text-3xl font-bold italic leading-relaxed">
+              "Nada más argentino que la mezcla de un italiano y un español"
+            </p>
+          </div>
+          
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in">
-            Cruzamos fronteras, conectamos talentos
+            Argentina: Un país europeo en América Latina
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
-            Puente Europa es el enlace entre el talento argentino y las oportunidades laborales en Holanda y toda Europa.
+          
+          <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed font-light">
+            Somos la fusión de dos mundos que hoy vuelven a encontrarse. <strong>Puente Europa</strong> conecta el talento argentino con las oportunidades laborales en Holanda y toda Europa.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -29,20 +36,24 @@ export default function HeroSection() {
               href="/candidatos" 
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-[#004C97] rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
-              Soy Candidato
+              Soy Candidato →
             </Link>
             <Link 
               href="/empresas" 
               className="inline-flex items-center justify-center px-10 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white hover:text-[#004C97] transition-all duration-300"
             >
-              Soy Empresa
+              Soy Empresa →
             </Link>
           </div>
 
-          <p className="text-sm text-white/70 flex items-center gap-2">
-            <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-            Acompañamos más de 100 historias de éxito entre Argentina y Europa
-          </p>
+          <div className="flex items-center gap-4 flex-wrap">
+            <p className="text-sm text-white/70 flex items-center gap-2">
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              100+ historias de éxito
+            </p>
+            <span className="text-white/50">•</span>
+            <p className="text-sm text-white/70">🇦🇷 🇪🇺 Uniendo dos continentes</p>
+          </div>
         </div>
       </div>
 

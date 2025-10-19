@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
+import WhyArgentinaSection from '@/components/WhyArgentinaSection'
 import CandidatesEmotionalSection from '@/components/CandidatesEmotionalSection'
 import CompaniesEmotionalSection from '@/components/CompaniesEmotionalSection'
 import MissionSection from '@/components/MissionSection'
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen" id="top">
       <Header />
       <HeroSection />
+      <WhyArgentinaSection />
       <CandidatesEmotionalSection />
       <CompaniesEmotionalSection />
       <MissionSection />
