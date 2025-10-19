@@ -1,6 +1,6 @@
 'use client'
 
-import { Passport, TrendingUp, Heart, Clock } from 'lucide-react'
+import { FileCheck, TrendingUp, Heart, Clock } from 'lucide-react'
 
 export default function WhyArgentinaSection() {
   return (
@@ -19,7 +19,7 @@ export default function WhyArgentinaSection() {
           {/* Card 1 */}
           <div className="bg-gradient-to-br from-[#004C97] to-[#003a72] text-white rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-300">
             <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
-              <Passport className="w-8 h-8" />
+              <FileCheck className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Nacionalidad europea</h3>
             <p className="text-white/90 leading-relaxed">
