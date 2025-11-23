@@ -1,9 +1,8 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
-import Image from 'next/image'
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -199,15 +198,16 @@ export default function ContactSection() {
               viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
-              <Image
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2000&auto=format&fit=crop"
-                alt="Oficinas en Europa"
-                width={600}
-                height={400}
+              <video
+                src="/contacto-video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-[300px] md:h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white">
+              <div className="absolute bottom-6 left-6 right-6 text-white z-10">
                 <h3 className="text-2xl font-bold mb-2">Reclutamiento llave en mano</h3>
                 <p className="text-gray-200">Selección, visado, traslado y alojamiento coordinados por Puente Europa</p>
               </div>
@@ -232,13 +232,40 @@ export default function ContactSection() {
                     <p className="text-gray-600">info@puenteeuropa.com</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-start space-x-3">
                   <div className="flex items-center justify-center w-10 h-10 bg-[#004C97]/10 rounded-lg">
                     <Phone className="w-5 h-5 text-[#004C97]" />
                   </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Teléfono</p>
-                    <p className="text-gray-600">+54 9 11 1234-5678</p>
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-900 mb-2">Teléfono (Argentina)</p>
+                    <a 
+                      href="https://wa.me/5493415402089" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      +54 9 341 540 2089
+                    </a>
+                    <p className="text-xs text-gray-500 mt-1">WhatsApp y llamadas</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-10 h-10 bg-[#004C97]/10 rounded-lg">
+                    <Phone className="w-5 h-5 text-[#004C97]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-900 mb-2">Teléfono (Europa - Holanda)</p>
+                    <a 
+                      href="https://wa.me/34672705063" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      +34 672 705 063
+                    </a>
+                    <p className="text-xs text-gray-500 mt-1">Coordinación en Europa - WhatsApp y llamadas</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -247,18 +274,30 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Ubicación</p>
-                    <p className="text-gray-600">Buenos Aires, Argentina</p>
+                    <p className="text-gray-600">Rosario, Santa Fe, Argentina</p>
                   </div>
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <p className="font-semibold text-gray-900 mb-4">Seguinos en redes</p>
                 <div className="flex space-x-4">
-                  <a href="https://instagram.com/puenteeuropa" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] text-white rounded-lg transition-all duration-300 transform hover:scale-110">
+                  <a 
+                    href="https://www.instagram.com/puente.europa?igsh=dTY0dXdzeTY2aTdj" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+                    aria-label="Instagram"
+                  >
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="https://linkedin.com/company/puenteeuropa" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] text-white rounded-lg transition-all duration-300 transform hover:scale-110">
-                    <Linkedin className="w-5 h-5" />
+                  <a 
+                    href="https://www.facebook.com/share/1Awszxhpwh/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-5 h-5" />
                   </a>
                 </div>
               </div>

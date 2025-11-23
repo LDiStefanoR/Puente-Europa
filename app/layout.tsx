@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
 
 export const metadata: Metadata = {
   title: 'Puente Europa - Trabajo y movilidad en Europa',
@@ -34,6 +35,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <WhatsAppFloatButton />
       </body>
     </html>
   )

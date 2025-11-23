@@ -1,8 +1,9 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TestimonialsSection from '@/components/TestimonialsSection'
+import JobOffersSection from '@/components/JobOffersSection'
 import Link from 'next/link'
-import { Globe, Home, Briefcase, DollarSign, AlertCircle, CheckCircle, Plane, Clock, Heart, TrendingUp, Car, Users } from 'lucide-react'
+import { Globe, Home, Briefcase, DollarSign, AlertCircle, CheckCircle, Plane, Clock, Heart, TrendingUp, Car, Users, MessageCircle, Shield, Star, Sparkles, ArrowRight } from 'lucide-react'
 
 const benefits = [
   {
@@ -78,8 +79,8 @@ const requirements = [
   },
   {
     icon: Globe,
-    title: 'Inglés funcional B1',
-    description: 'Suficiente para ir de compras, trabajar y sobrevivir en la vida diaria. Demostrable mediante conversación o certificado.',
+    title: 'Muchas ganas de aprender inglés y partir con nivel comunicacional básico',
+    description: 'No necesitás ser experto. Con un nivel básico de comunicación y muchas ganas de aprender y mejorar, podés empezar. La inmersión diaria te ayudará a mejorar rápidamente.',
     required: true,
   },
   {
@@ -161,6 +162,198 @@ export default function CandidatosPage() {
             </div>
             <p className="text-2xl font-bold text-white/95">Uno de los salarios más altos del mundo</p>
             <p className="text-lg text-white/80 mt-2">Ganancia en euros = poder adquisitivo global</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ofertas de Trabajo */}
+      <JobOffersSection />
+
+      {/* Paquetes que Ofrecemos */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#004C97] to-[#003a72] text-white rounded-full px-6 py-3 mb-6">
+                <Sparkles className="w-6 h-6" />
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Paquetes que Ofrecemos
+                </h2>
+              </div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Elegí el nivel de apoyo que necesitás. Todos incluyen entrevista inicial gratuita.
+              </p>
+            </div>
+
+            {/* Entrevista Inicial Gratuita */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 mb-12 border-2 border-blue-200">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-[#0f172a] mb-3">
+                    💬 Entrevista Inicial – GRATUITA
+                  </h3>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Todas las personas reciben una entrevista inicial sin costo, donde evaluamos:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {['Situación actual', 'Nivel de inglés', 'Experiencia laboral', 'Tipo de oferta que mejor encaja', 'Necesidades logísticas', 'Capacidad económica para viajar', 'Urgencia del viaje'].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mt-4 italic">
+                    👉 Esto nos permite asignar el paquete correcto, según cuánto apoyo real necesiten.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Grid de Paquetes */}
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              {/* Paquete Básico */}
+              <div className="bg-white rounded-3xl shadow-xl border-2 border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="bg-gradient-to-br from-gray-400 to-gray-600 p-6 text-white text-center">
+                  <div className="text-5xl mb-3">🥉</div>
+                  <h3 className="text-2xl font-bold mb-2">PAQUETE BÁSICO</h3>
+                  <p className="text-white/90 text-sm">"Listo para Postular"</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                    Diseñado para personas que quieren aplicar por su cuenta, pero con una guía profesional.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    {[
+                      'Entrevista inicial gratuita',
+                      'Asesoría completa sobre cómo trabajar en Holanda',
+                      'CV europeo optimizado',
+                      'Acceso y recomendación de ofertas publicadas',
+                      'Análisis de perfil para saber a qué puestos puede aplicar',
+                      'Checklist de documentos',
+                      'Guía para comprar pasajes y preparar maleta',
+                      'Consejos para movilidad interna en Holanda',
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <p className="text-xs font-semibold text-gray-700 mb-1">Ideal para:</p>
+                    <p className="text-xs text-gray-600">
+                      Personas independientes que ya tienen cierta experiencia viajando y solo necesitan estructura.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Paquete Estándar */}
+              <div className="bg-white rounded-3xl shadow-xl border-2 border-blue-300 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
+                <div className="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  MÁS POPULAR
+                </div>
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white text-center">
+                  <div className="text-5xl mb-3">🥈</div>
+                  <h3 className="text-2xl font-bold mb-2">PAQUETE ESTÁNDAR</h3>
+                  <p className="text-white/90 text-sm">"Postulación Guiada + Viaje Seguro"</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed font-semibold">
+                    Incluye todo lo del Paquete Básico +
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    {[
+                      'Recomendación personalizada de ofertas según perfil',
+                      'Acompañamiento durante la postulación',
+                      'Preparación intensiva para entrevistas',
+                      'Revisión completa del perfil laboral',
+                      'Croquis del viaje desde Argentina hasta Holanda',
+                      'Recomendación de alojamiento temporal',
+                      'Seguro de alojamiento: varios días cubiertos',
+                      'Asesoría en compra de vuelos',
+                      'Envío de vouchers importantes (tren, bus, transfers)',
+                      'Checklist final de viaje',
+                      'Contacto directo por WhatsApp durante la preparación',
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
+                    <p className="text-xs font-semibold text-blue-700 mb-1">Ideal para:</p>
+                    <p className="text-xs text-blue-600">
+                      Quienes quieren viajar con todo organizado, sin correr riesgos logísticos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Paquete Premium */}
+              <div className="bg-white rounded-3xl shadow-xl border-2 border-amber-300 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative">
+                <div className="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                  <Star className="w-3 h-3" />
+                  PREMIUM
+                </div>
+                <div className="bg-gradient-to-br from-amber-500 to-orange-600 p-6 text-white text-center">
+                  <div className="text-5xl mb-3">🥇</div>
+                  <h3 className="text-2xl font-bold mb-2">PAQUETE PREMIUM</h3>
+                  <p className="text-white/90 text-sm">"Llegás, Vivís y Trabajás"</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed font-semibold">
+                    Incluye todo lo del Paquete Estándar +
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    {[
+                      'Nivelación de inglés para entrevista y trabajo',
+                      'Monitoreo del viaje en tiempo real (WhatsApp 24/7)',
+                      'Acompañamiento paso a paso desde tu casa → hasta tu nuevo hogar',
+                      'Búsqueda y confirmación de alojamiento temporal',
+                      'Seguro de alojamiento ampliado: cubre días extra',
+                      'Organización total del viaje: ruta, horarios, vouchers',
+                      'Transfer al alojamiento',
+                      'Reglas y normas del lugar donde vivirá',
+                      'Seguimiento por 30 días después de llegar',
+                      'Apoyo emocional y cultural para la adaptación',
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
+                    <p className="text-xs font-semibold text-amber-700 mb-1">Ideal para:</p>
+                    <p className="text-xs text-amber-600">
+                      Personas que viajan solas, sin experiencia previa en Europa, o que quieren viajar con todo resuelto, seguro y monitoreado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA para más información */}
+            <div className="bg-gradient-to-r from-[#004C97] to-[#003a72] rounded-3xl p-8 text-center text-white shadow-xl">
+              <Shield className="w-12 h-12 mx-auto mb-4 text-white/90" />
+              <h3 className="text-2xl font-bold mb-3">¿No estás seguro qué paquete elegir?</h3>
+              <p className="text-lg text-white/90 mb-6">
+                En la entrevista inicial gratuita te ayudamos a identificar el paquete perfecto según tus necesidades.
+              </p>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#004C97] rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Solicitar entrevista gratuita
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

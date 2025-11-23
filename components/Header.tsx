@@ -32,6 +32,7 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#004C97] font-semibold' : 'text-gray-700 hover:text-[#004C97]'}`}>Inicio</Link>
+            <Link href="/ofertas" className={`transition-colors ${pathname === '/ofertas' ? 'text-[#004C97] font-semibold' : 'text-gray-700 hover:text-[#004C97]'}`}>Ofertas</Link>
             <Link href="/empresas" className={`transition-colors ${pathname === '/empresas' ? 'text-[#004C97] font-semibold' : 'text-gray-700 hover:text-[#004C97]'}`}>Empresas</Link>
             <Link href="/candidatos" className={`transition-colors ${pathname === '/candidatos' ? 'text-[#004C97] font-semibold' : 'text-gray-700 hover:text-[#004C97]'}`}>Candidatos</Link>
             <Link href="/contacto" className={`transition-colors ${pathname === '/contacto' ? 'text-[#004C97] font-semibold' : 'text-gray-700 hover:text-[#004C97]'}`}>Contacto</Link>
@@ -59,6 +60,7 @@ export default function Header() {
         <div className="md:hidden border-t border-gray-200 bg-white">
           <div className="px-4 py-4 space-y-2">
             <Link href="/" className="block w-full text-left py-2 text-gray-700 hover:text-[#004C97]" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
+            <Link href="/ofertas" className="block w-full text-left py-2 text-gray-700 hover:text-[#004C97]" onClick={() => setIsMenuOpen(false)}>Ofertas</Link>
             <Link href="/empresas" className="block w-full text-left py-2 text-gray-700 hover:text-[#004C97]" onClick={() => setIsMenuOpen(false)}>Empresas</Link>
             <Link href="/candidatos" className="block w-full text-left py-2 text-gray-700 hover:text-[#004C97]" onClick={() => setIsMenuOpen(false)}>Candidatos</Link>
             <Link href="/contacto" className="block w-full text-left py-2 text-gray-700 hover:text-[#004C97]" onClick={() => setIsMenuOpen(false)}>Contacto</Link>

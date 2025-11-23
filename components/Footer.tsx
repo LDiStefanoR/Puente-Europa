@@ -36,26 +36,20 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/puenteeuropa" 
+                href="https://www.instagram.com/puente.europa?igsh=dTY0dXdzeTY2aTdj" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] rounded-lg transition-all duration-300 transform hover:scale-110"
+                aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com/company/puenteeuropa" 
+                href="https://www.facebook.com/share/1Awszxhpwh/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] rounded-lg transition-all duration-300 transform hover:scale-110"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://facebook.com/puenteeuropa" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 bg-[#004C97] hover:bg-[#003a72] rounded-lg transition-all duration-300 transform hover:scale-110"
+                aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -145,11 +139,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#004C97]" />
-                <span className="text-gray-300">+54 9 11 1234-5678</span>
+                <a 
+                  href="https://wa.me/5493415402089" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  +54 9 341 540 2089
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-[#004C97]" />
-                <span className="text-gray-300">Buenos Aires, Argentina</span>
+                <span className="text-gray-300">Rosario, Santa Fe, Argentina</span>
               </div>
             </div>
           </motion.div>
