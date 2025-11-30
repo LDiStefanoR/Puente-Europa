@@ -10,7 +10,7 @@ export default function SolutionSection() {
     { icon: MapPin, text: 'Orientación paso a paso' },
     { icon: GraduationCap, text: 'Capacitación en inglés' },
     { icon: Home, text: 'Traslados y logística (si lo necesitan)' },
-    { icon: Home, text: 'Ayuda para conseguir alojamiento' },
+    { icon: Home, text: 'Alojamiento garantizado' },
     { icon: Lightbulb, text: 'Recomendaciones reales basadas en experiencia en Europa' }
   ]
 
@@ -52,7 +52,7 @@ export default function SolutionSection() {
           >
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100">
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
-                Somos una <strong className="text-[#004C97]">agencia reclutadora intermedia</strong>, enfocada en conectar argentinos con <strong className="text-[#004C97]">empleos europeos de altos salarios</strong> (15 €/h o más), acompañándolos <strong className="text-[#004C97]">antes, durante y después del viaje</strong>.
+                Somos una <strong className="text-[#004C97]">agencia reclutadora intermedia</strong>, enfocada en conectar argentinos con <strong className="text-[#004C97]">empleos europeos de altos salarios</strong> (15 €/hs de media), acompañándolos <strong className="text-[#004C97]">antes, durante y después del viaje</strong>.
               </p>
               
               <div className="bg-gradient-to-r from-[#004C97]/10 to-transparent rounded-xl p-6 border-l-4 border-[#004C97]">

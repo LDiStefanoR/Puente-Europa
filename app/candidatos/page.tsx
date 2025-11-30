@@ -3,14 +3,14 @@ import Footer from '@/components/Footer'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import JobOffersSection from '@/components/JobOffersSection'
 import Link from 'next/link'
-import { Globe, Home, Briefcase, DollarSign, AlertCircle, CheckCircle, Plane, Clock, Heart, TrendingUp, Car, Users, MessageCircle, Shield, Star, Sparkles, ArrowRight } from 'lucide-react'
+import { Globe, Home, Briefcase, DollarSign, AlertCircle, CheckCircle, Plane, Clock, Heart, TrendingUp, Car, Users, MessageCircle, Shield, Star, Sparkles, ArrowRight, FileText, UserPlus } from 'lucide-react'
 
 const benefits = [
   {
     icon: DollarSign,
     title: 'Salario de primer mundo',
-    description: '€15.50/hora mínimo',
-    highlight: 'Uno de los salarios más altos del mundo',
+    description: 'Desde €14.40/hora (mínimo legal 2025)',
+    highlight: 'Salarios competitivos superiores al mínimo',
     color: 'from-amber-500 to-yellow-600',
   },
   {
@@ -58,9 +58,23 @@ const benefits = [
   {
     icon: Clock,
     title: 'Temporadas flexibles',
-    description: 'Mínimo 6 meses',
+    description: 'Adaptado a tus necesidades',
     highlight: 'Opción de quedarte o ganar dinero y volver',
     color: 'from-orange-500 to-red-600',
+  },
+  {
+    icon: UserPlus,
+    title: 'Ofertas sin experiencia',
+    description: 'Oportunidades para comenzar desde cero',
+    highlight: 'No necesitás experiencia previa para empezar',
+    color: 'from-teal-500 to-cyan-600',
+  },
+  {
+    icon: FileText,
+    title: 'Presume de tu currículum para el futuro',
+    description: 'Experiencias internacionales que marcan la diferencia',
+    highlight: 'CV enriquecido con trabajo en Europa',
+    color: 'from-violet-500 to-purple-600',
   },
 ]
 
@@ -123,19 +137,19 @@ export default function CandidatosPage() {
         </div>
       </section>
 
-      {/* 8 Beneficios Destacados */}
+      {/* 10 Beneficios Destacados */}
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-6">
-              8 razones para elegir Europa
+              10 razones para elegir Europa
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Beneficios reales que transforman tu carrera y tu vida
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon
               return (
@@ -156,12 +170,13 @@ export default function CandidatosPage() {
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-6xl">💰</span>
               <div className="text-left">
-                <p className="text-white text-lg font-semibold">Ganancia por hora</p>
-                <p className="text-7xl font-extrabold text-white drop-shadow-lg">€15.50</p>
+                <p className="text-white text-lg font-semibold">Salario mínimo legal (2025)</p>
+                <p className="text-7xl font-extrabold text-white drop-shadow-lg">€14.40</p>
+                <p className="text-white/90 text-sm mt-1">brutos por hora</p>
               </div>
             </div>
-            <p className="text-2xl font-bold text-white/95">Uno de los salarios más altos del mundo</p>
-            <p className="text-lg text-white/80 mt-2">Ganancia en euros = poder adquisitivo global</p>
+            <p className="text-2xl font-bold text-white/95">Salarios competitivos desde el mínimo legal</p>
+            <p className="text-lg text-white/80 mt-2">Nuestras ofertas superan el mínimo legal. Ganancia en euros = poder adquisitivo global</p>
           </div>
         </div>
       </section>
@@ -458,7 +473,7 @@ export default function CandidatosPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-[#004C97]/30">
                 <div className="text-4xl mb-4">⏱️</div>
-                <h3 className="text-2xl font-bold text-[#0f172a] mb-3">Temporadas de 6 meses</h3>
+                <h3 className="text-2xl font-bold text-[#0f172a] mb-3">Temporadas flexibles</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Ideal para personas que quieren <strong>trabajar por temporadas</strong>, ganar dinero en euros y volver a casa. Muchas personas eligen esta modalidad para generar ingresos y regresar.
                 </p>

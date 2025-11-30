@@ -1,43 +1,33 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Quote, Star, MapPin } from 'lucide-react'
+import { Users, Globe, Heart, Lightbulb, MapPin, Briefcase } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
-const testimonials = [
+const teamValues = [
   {
-    name: 'Martín Álvarez',
-    age: 28,
-    origin: 'Buenos Aires, Argentina',
-    destination: 'Ámsterdam, Países Bajos',
-    role: 'Ingeniero de Software',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
-    testimonial:
-      'Hace dos años soñaba con crecer profesionalmente en Europa, pero no sabía por dónde empezar. Puente Europa me guió en cada paso: desde armar mi CV europeo hasta encontrar alojamiento en Ámsterdam. Hoy trabajo en una empresa increíble y vivo la vida que siempre quise.',
-    rating: 5,
+    icon: Users,
+    title: 'Somos trabajadores como vos',
+    description: 'Un grupo de españoles y argentinos emigrantes y viajeros que hemos trabajado en estos países. Conocemos las ofertas desde adentro porque las vivimos.',
+    color: 'from-blue-500 to-blue-600',
   },
   {
-    name: 'Carolina Méndez',
-    age: 32,
-    origin: 'Córdoba, Argentina',
-    destination: 'Rotterdam, Países Bajos',
-    role: 'Coordinadora de Logística',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop',
-    testimonial:
-      'El proceso fue transparente y humano. Leonardo me acompañó en cada duda, me conectó con empresas serias y me ayudó a adaptarme a la cultura holandesa. No fue solo un trabajo, fue el comienzo de una nueva vida.',
-    rating: 5,
+    icon: Globe,
+    title: 'Experiencia real en terreno',
+    description: 'Hemos trabajado en Holanda, Alemania, España y más. Conocemos las empresas, los procesos, los desafíos y las oportunidades reales.',
+    color: 'from-green-500 to-green-600',
   },
   {
-    name: 'Diego Romero',
-    age: 35,
-    origin: 'Rosario, Argentina',
-    destination: 'Barcelona, España',
-    role: 'Chef Ejecutivo',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop',
-    testimonial:
-      'Gracias a Puente Europa pude cumplir mi sueño de trabajar en gastronomía europea. Me ayudaron con visado, documentos y hasta me conectaron con restaurantes que valoraban mi experiencia. Hoy lidero una cocina en Barcelona.',
-    rating: 5,
+    icon: Heart,
+    title: 'Nuestra misión',
+    description: 'Acercar estas oportunidades a todo el mundo. Compartir la información y recursos que quizás no eran tan claros o eran más escasos cuando nosotros empezamos.',
+    color: 'from-purple-500 to-purple-600',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Tu puente hacia Europa',
+    description: 'Queremos que toda nuestra experiencia sea tu puente. Que no tengas que pasar por las mismas dificultades que nosotros enfrentamos al principio.',
+    color: 'from-orange-500 to-orange-600',
   },
 ]
 
@@ -52,61 +42,89 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Historias reales, sueños cumplidos</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Conocé a quienes ya viven y trabajan en Europa gracias a Puente Europa</p>
+          <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
+            <span className="text-sm font-semibold">🤝 QUIÉNES SOMOS</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Conocimiento real, experiencia compartida</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Somos un grupo de trabajadores, emigrantes y viajeros que hemos vivido y trabajado en Europa. Conocemos las ofertas desde adentro porque las vivimos en primera persona.
+          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <Quote className="w-8 h-8 text-[#fb923c] mb-6" />
-              <p className="text-gray-200 leading-relaxed mb-6 text-lg italic">"{testimonial.testimonial}"</p>
-              <div className="flex items-center mb-6">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-[#fb923c] fill-current" />
-                ))}
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="relative">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={60}
-                    height={60}
-                    className="w-15 h-15 rounded-full object-cover border-2 border-[#fb923c]"
-                  />
+        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-5xl mx-auto">
+          {teamValues.map((value, index) => {
+            const Icon = value.icon
+            return (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-gradient-to-br ${value.color} rounded-2xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}
+              >
+                <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 w-fit mb-6">
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-lg">{testimonial.name}, {testimonial.age}</h4>
-                  <div className="flex items-center text-gray-300 text-sm mb-1">{testimonial.role}</div>
-                  <div className="flex items-center text-gray-300 text-sm"><MapPin className="w-4 h-4 mr-1" />{testimonial.origin} → {testimonial.destination}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
+                <p className="text-white/95 leading-relaxed text-lg">{value.description}</p>
+              </motion.div>
+            )
+          })}
         </div>
 
-        {/* Success stats */}
+        {/* Nuestra historia */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-16 max-w-4xl mx-auto"
+        >
+          <div className="flex items-start gap-6">
+            <div className="bg-gradient-to-br from-[#004C97] to-[#003a72] rounded-2xl p-6 flex-shrink-0">
+              <Briefcase className="w-12 h-12 text-white" />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold mb-4">Nuestra historia</h3>
+              <p className="text-gray-200 leading-relaxed text-lg mb-4">
+                Cuando empezamos a trabajar en Europa, nos encontramos con información dispersa, procesos poco claros y recursos limitados. Tuvimos que aprender todo desde cero: cómo armar un CV europeo, dónde buscar alojamiento, qué empresas eran confiables, cómo adaptarse a la cultura laboral.
+              </p>
+              <p className="text-gray-200 leading-relaxed text-lg mb-4">
+                Después de años trabajando en diferentes países y empresas, acumulamos experiencia real. Conocemos las ofertas porque las vivimos. Sabemos qué funciona y qué no. Entendemos los desafíos porque los enfrentamos.
+              </p>
+              <p className="text-gray-200 leading-relaxed text-lg font-semibold">
+                Ahora queremos compartir todo eso contigo. Que nuestra experiencia sea tu puente hacia Europa.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Qué ofrecemos */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center"
+          className="bg-gradient-to-r from-[#004C97] to-[#003a72] rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto mb-16"
         >
-          <h3 className="text-3xl font-bold mb-8">Nuestro impacto</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">100+</div><div className="text-gray-300">Vidas transformadas</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">5</div><div className="text-gray-300">Países europeos</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">95%</div><div className="text-gray-300">Tasa de éxito</div></div>
-            <div><div className="text-4xl font-bold text-[#fb923c] mb-2">24/7</div><div className="text-gray-300">Soporte continuo</div></div>
+          <h3 className="text-3xl font-bold mb-6">¿Qué significa esto para vos?</h3>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-3xl mb-3">📋</div>
+              <h4 className="font-bold text-lg mb-2">Información clara</h4>
+              <p className="text-white/90 text-sm">Ofertas reales que conocemos desde adentro, sin información confusa o engañosa.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-3xl mb-3">🎯</div>
+              <h4 className="font-bold text-lg mb-2">Recursos prácticos</h4>
+              <p className="text-white/90 text-sm">Guías, checklists y consejos basados en nuestra experiencia real trabajando en Europa.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-3xl mb-3">🤝</div>
+              <h4 className="font-bold text-lg mb-2">Acompañamiento</h4>
+              <p className="text-white/90 text-sm">Te ayudamos a evitar los errores que nosotros cometimos y a aprovechar las oportunidades que conocemos.</p>
+            </div>
           </div>
         </motion.div>
 
@@ -116,11 +134,18 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center"
         >
-          <h3 className="text-3xl font-bold mb-4">¿Listo para escribir tu propia historia?</h3>
-          <p className="text-xl text-gray-300 mb-8">Conectamos personas con oportunidades, sueños con realidad</p>
-          <Link href="/contacto" className="inline-block bg-white text-[#004C97] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Comenzar mi proceso</Link>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">¿Listo para cruzar tu puente hacia Europa?</h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Conectamos personas con oportunidades reales. Compartimos nuestra experiencia para que tu camino sea más claro y directo.
+          </p>
+          <Link 
+            href="/contacto" 
+            className="inline-block bg-white text-[#004C97] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Comenzar mi proceso
+          </Link>
         </motion.div>
       </div>
     </section>

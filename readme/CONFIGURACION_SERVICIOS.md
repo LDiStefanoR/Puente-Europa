@@ -97,11 +97,135 @@ Actualmente el proyecto está configurado para usar Nodemailer, pero necesita:
 - **SMTP_PORT**: Puerto (generalmente 587)
 - **SMTP_USER**: Usuario SMTP
 - **SMTP_PASS**: Contraseña SMTP
-- **CONTACT_TO**: `info@puenteeuropa.com`
+- **CONTACT_TO**: `general@nlbridgear.com` (o el email donde quieras recibir los mensajes)
 
 **Nota**: Con el plan Free de ImprovMX no se puede enviar emails. Para enviar emails desde el formulario de contacto, se necesita:
 1. Plan Premium de ImprovMX, O
 2. Configurar otro servicio SMTP (Gmail, SendGrid, Mailgun, etc.)
+
+---
+
+## 📧 CONFIGURACIÓN SMTP - GUÍA PASO A PASO
+
+### ⚠️ PROBLEMA ACTUAL
+El formulario de contacto **NO está enviando emails** porque falta la configuración SMTP. Actualmente solo registra los datos en los logs del servidor.
+
+### ✅ SOLUCIÓN: Configurar SMTP
+
+Necesitas crear un archivo `.env.local` en la raíz del proyecto con las siguientes variables:
+
+```env
+# Configuración SMTP
+SMTP_HOST=smtp.tu-servicio.com
+SMTP_PORT=587
+SMTP_USER=tu_usuario
+SMTP_PASS=tu_contraseña
+CONTACT_TO=general@nlbridgear.com
+```
+
+### 🔧 OPCIONES DE SERVICIOS SMTP
+
+#### **Opción 1: Gmail (Recomendado para empezar - GRATIS)**
+
+1. **Habilitar verificación en 2 pasos** en tu cuenta de Gmail
+2. **Generar una "App Password"**:
+   - Ir a: https://myaccount.google.com/apppasswords
+   - Seleccionar "Mail" y "Other (Custom name)"
+   - Nombrar: "Puente Europa"
+   - Copiar la contraseña generada (16 caracteres)
+
+3. **Configurar en `.env.local`**:
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=leo.rds.21@gmail.com
+SMTP_PASS=xxxx xxxx xxxx xxxx
+CONTACT_TO=general@nlbridgear.com
+```
+
+**Ventajas**: Gratis, fácil de configurar  
+**Desventajas**: Límite de 500 emails/día, puede ir a spam si envías muchos
+
+---
+
+#### **Opción 2: SendGrid (Profesional - GRATIS hasta 100 emails/día)**
+
+1. **Crear cuenta** en: https://sendgrid.com/
+2. **Verificar tu email** y crear una API Key
+3. **Configurar en `.env.local`**:
+```env
+SMTP_HOST=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_USER=apikey
+SMTP_PASS=tu_api_key_de_sendgrid
+CONTACT_TO=general@nlbridgear.com
+```
+
+**Ventajas**: Profesional, buena entrega, gratis hasta 100/día  
+**Desventajas**: Requiere verificación de dominio para más volumen
+
+---
+
+#### **Opción 3: Mailgun (Profesional - GRATIS hasta 5,000 emails/mes)**
+
+1. **Crear cuenta** en: https://www.mailgun.com/
+2. **Verificar tu dominio** o usar el dominio de prueba
+3. **Obtener credenciales SMTP** del dashboard
+4. **Configurar en `.env.local`**:
+```env
+SMTP_HOST=smtp.mailgun.org
+SMTP_PORT=587
+SMTP_USER=postmaster@tu-dominio.mailgun.org
+SMTP_PASS=tu_password_de_mailgun
+CONTACT_TO=general@nlbridgear.com
+```
+
+**Ventajas**: Muy profesional, excelente entrega, 5,000 emails/mes gratis  
+**Desventajas**: Requiere verificación de dominio
+
+---
+
+#### **Opción 4: ImprovMX Premium ($9/mes)**
+
+Si ya usas ImprovMX y quieres mantener todo en un solo servicio:
+
+1. **Actualizar a plan Premium** en ImprovMX
+2. **Obtener credenciales SMTP** del panel
+3. **Configurar en `.env.local`**:
+```env
+SMTP_HOST=smtp.improvmx.com
+SMTP_PORT=587
+SMTP_USER=tu_usuario_improvmx
+SMTP_PASS=tu_password_improvmx
+CONTACT_TO=general@nlbridgear.com
+```
+
+**Ventajas**: Todo en un solo servicio  
+**Desventajas**: Requiere pago mensual
+
+---
+
+### 📝 PASOS PARA CONFIGURAR
+
+1. **Crear archivo `.env.local`** en la raíz del proyecto (mismo nivel que `package.json`)
+2. **Agregar las variables** según el servicio que elijas
+3. **Reiniciar el servidor de desarrollo** (`npm run dev`)
+4. **Probar el formulario** enviando un mensaje de prueba
+5. **Verificar que llegue el email** a `general@nlbridgear.com` (que reenvía a `leo.rds.21@gmail.com`)
+
+### 🚀 CONFIGURACIÓN EN VERCEL (Producción)
+
+Si el sitio está en Vercel, también necesitas agregar estas variables en:
+1. Panel de Vercel → Tu proyecto → Settings → Environment Variables
+2. Agregar cada variable (`SMTP_HOST`, `SMTP_PORT`, etc.)
+3. Hacer un nuevo deploy
+
+### 🔍 VERIFICAR QUE FUNCIONA
+
+1. Enviar un mensaje desde el formulario de contacto
+2. Revisar los logs del servidor (debería decir "✅ Email enviado exitosamente")
+3. Verificar que llegue el email a `leo.rds.21@gmail.com`
+4. Si hay error, revisar los logs para ver el mensaje específico
 
 ---
 

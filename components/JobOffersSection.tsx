@@ -66,11 +66,18 @@ export default function JobOffersSection() {
                     <h3 className="text-lg font-bold mb-1">{job.title}</h3>
                     <p className="text-white/90 text-sm">{job.company}</p>
                   </div>
-                  {job.urgent && (
-                    <span className="px-2 py-1 bg-white text-red-600 text-xs font-bold rounded-full animate-pulse">
-                      URGENTE
-                    </span>
-                  )}
+                  <div className="flex flex-col gap-1 items-end">
+                    {job.urgent && (
+                      <span className="px-2 py-1 bg-white text-red-600 text-xs font-bold rounded-full animate-pulse">
+                        URGENTE
+                      </span>
+                    )}
+                    {job.noExperience && (
+                      <span className="px-2 py-1 bg-white text-[#004C97] text-xs font-bold rounded-full">
+                        SIN EXPERIENCIA
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 

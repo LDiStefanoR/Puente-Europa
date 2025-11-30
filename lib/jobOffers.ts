@@ -23,6 +23,7 @@ export interface JobOffer {
   description: string
   available: boolean
   urgent?: boolean
+  noExperience?: boolean
 }
 
 // ARRAY DE OFERTAS - FÁCIL DE MODIFICAR Y REPLICAR
@@ -52,6 +53,7 @@ export const jobOffers: JobOffer[] = [
     description: 'Buscamos operarios para trabajar en almacén logístico. Trabajo en equipo, ambiente internacional, horarios flexibles. Ideal para personas responsables y con ganas de trabajar.',
     available: true,
     urgent: false,
+    noExperience: true,
   },
   {
     id: 'job-002',
