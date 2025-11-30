@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description: 'Conectamos talentos argentinos con oportunidades laborales en Europa. Asesoramos, filtramos y acompañamos tu experiencia para trabajar en Holanda y más destinos europeos.',
   keywords: 'trabajo europa, empleo holanda, argentinos europa, visa trabajo, experiencia internacional',
   authors: [{ name: 'Leonardo Rodríguez Di Stefano' }],
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Puente Europa - Trabajo y movilidad en Europa',
     description: 'Conectamos talentos argentinos con oportunidades laborales en Europa',
@@ -23,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
           <script

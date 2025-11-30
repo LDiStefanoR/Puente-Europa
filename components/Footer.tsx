@@ -118,7 +118,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Servicios</h4>
             <ul className="space-y-3">
               <li className="text-gray-300">Selección profesional</li>
-              <li className="text-gray-300">Gestión completa (visado/traslado)</li>
+              <li className="text-gray-300">Gestión completa de traslado</li>
               <li className="text-gray-300">Reducción de costos</li>
               <li className="text-gray-300">Talento comprometido</li>
             </ul>

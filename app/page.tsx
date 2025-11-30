@@ -1,6 +1,10 @@
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import MissionSection from '@/components/MissionSection'
+import VisionPurposeSection from '@/components/VisionPurposeSection'
+import ProblemSection from '@/components/ProblemSection'
+import SolutionSection from '@/components/SolutionSection'
+import BenefitsSection from '@/components/BenefitsSection'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 
@@ -30,6 +34,10 @@ export default function Home() {
       </section>
       
       <MissionSection />
+      <VisionPurposeSection />
+      <ProblemSection />
+      <SolutionSection />
+      <BenefitsSection />
       <Footer />
     </main>
   )

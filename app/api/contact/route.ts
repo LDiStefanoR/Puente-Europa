@@ -21,7 +21,8 @@ export async function POST(req: NextRequest) {
 
     // TODO: Email sending will be configured after deployment
     // For now, just log the form data and return success
-    console.log('Contact form submission:', { name, company, email, phone, message })
+    // Email will be sent to: general@nlbridgear.com
+    console.log('Contact form submission (to general@nlbridgear.com):', { name, company, email, phone, message })
 
     return NextResponse.json({ ok: true })
   } catch (err) {
